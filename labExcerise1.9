@@ -1,0 +1,24 @@
+import kotlin.random.Random
+
+fun main() {
+	println("Number Guessing Game");
+    println();
+    val number = Random.nextInt(1,101);
+    var tries = 0;
+    do{
+        print("Guess number from 1-100:");
+        var input = readLine()!!;
+        var guess = input.toInt();
+        
+        if(guess < number){
+        	println("Too Low");
+            tries++;
+        }
+        else if(guess > number){
+        	println("Too High");
+            tries++;
+        }
+    }while(guess != number)
+    
+    print("You have guessed it. Number of tries = $tries")
+}
