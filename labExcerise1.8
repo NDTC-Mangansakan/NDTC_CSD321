@@ -1,0 +1,35 @@
+// Define a function to check if a number is prime
+fun isPrime(number: Int): Boolean {
+    // Check if the number is less than or equal to 1; such numbers are not prime
+    if (number <= 1) {
+        return false
+    }
+
+    // Calculate the square root of the number and convert it to an integer
+    val sqrt = kotlin.math.sqrt(number.toDouble()).toInt()
+
+    // Iterate from 2 to the square root of the number
+    for (i in 2..sqrt) {
+        // If the number is divisible by 'i', it's not prime; return false
+        if (number % i == 0) {
+            return false
+        }
+    }
+
+    // If the number passes all the above checks, it's prime; return true
+    return true
+}
+
+fun main() {
+    // Print a header message
+    println("Prime numbers from 1 to 5000:")
+
+    // Iterate through numbers from 1 to 5000
+    for (i in 1..5000) {
+        // Check if the current number 'i' is prime using the 'isPrime' function
+        if (isPrime(i)) {
+            // If 'i' is prime, print it
+            println(i)
+        }
+    }
+}
