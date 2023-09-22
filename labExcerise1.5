@@ -1,0 +1,14 @@
+fun main() {
+    var total = 0;
+    print("Enter a number:")
+    val input = readLine()!!
+    val n = input.toInt()
+    println("Multiples of $n that are divisible by 3 or 5 are:");
+    for(i in 1..n){
+        if(i % 3 == 0 || i % 5 == 0){
+            total += i
+            println(i);
+        }
+    }
+    print("The total sum of all the numbers is $total")
+}
