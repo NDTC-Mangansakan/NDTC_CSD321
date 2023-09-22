@@ -1,0 +1,12 @@
+fun main() {
+    var n = 1;
+    var year = 2023;
+    println("The next 20 leap years are:")
+    while(n <= 20){
+        if(year % 4 == 0){
+            println(year)
+            n++;
+        }
+        year++;
+    }
+}
