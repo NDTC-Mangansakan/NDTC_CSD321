@@ -1,0 +1,24 @@
+fun main() {
+    var sumTotal = 0;
+    var productTotal = 1;
+    print("Enter a number:")
+    val input = readLine()!!
+    val n = input.toInt()
+    print("Press 's' = sum or 'p' = product:")
+    val symbol = readLine()
+
+    if(n != null){
+        if(symbol == "s"){
+            for(i in 1..n){
+                sumTotal += i
+            }
+            print("The sum of the numbers between 1 - $n is = $sumTotal")
+        }
+        else if(symbol == "p"){
+            for(i in 1..n){
+                productTotal *= i
+            }
+            print("The product of the numbers between 1 - $n is = $productTotal")
+        }
+    }
+}
